@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name | Links</title>
+
+<!-- ============================================================
+     GOOGLE ANALYTICS 4 (GA4) — PLACEHOLDER
+     Replace G-XXXXXXXXXX with your actual GA4 Measurement ID.
+     Get it from: Google Analytics > Admin > Data Streams > Web
+     ============================================================ -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+
+<!-- ============================================================
+     META (FACEBOOK) PIXEL — PLACEHOLDER
+     Replace YOUR_PIXEL_ID with your actual Meta Pixel ID.
+     Get it from: Meta Events Manager > Data Sources > Pixels
+     ============================================================ -->
+<!--
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+</noscript>
+-->
+
+<style>
+  :root {
+    --bg-start: #0f0f1a;
+    --bg-end: #1a1a2e;
+    --card-bg: rgba(255, 255, 255, 0.06);
+    --card-border: rgba(255, 255, 255, 0.12);
+    --card-hover: rgba(255, 255, 255, 0.12);
+    --text-primary: #f5f5f7;
+    --text-secondary: #a0a0b2;
+    --accent: #8b5cf6;
+    --accent-glow: rgba(139, 92, 246, 0.35);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(160deg, var(--bg-start) 0%, var(--bg-end) 60%, #16213e 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 600;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08), 0 8px 24px var(--accent-glow);
+    margin-bottom: 20px;
+    /* Replace this block with: <img src="your-photo.jpg" class="profile-pic" alt="Your Name"> */
+  }
+
+  .name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .bio {
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    max-width: 340px;
+    margin-bottom: 36px;
+  }
+
+  .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .link-btn:hover {
+    background: var(--card-hover);
+    border-color: rgba(139, 92, 246, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--accent-glow);
+  }
+
+  .link-btn:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+
+  footer {
+    margin-top: 48px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.6;
+  }
+
+  /* ---------- Mobile responsiveness ---------- */
+  @media (max-width: 480px) {
+    body {
+      padding: 40px 16px;
+    }
+    .profile-pic {
+      width: 84px;
+      height: 84px;
+      font-size: 28px;
+    }
+    .name {
+      font-size: 20px;
+    }
+    .bio {
+      font-size: 14px;
+      max-width: 280px;
+    }
+    .link-btn {
+      padding: 14px 18px;
+      font-size: 14.5px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- Profile picture placeholder — swap div for an <img> tag when ready -->
+    <div class="profile-pic">YN</div>
+
+    <div class="name">Your Name</div>
+    <div class="bio">A short one-to-two line bio goes here. Describe who you are or what you do.</div>
+
+    <!-- ============================================================
+         LINK BUTTONS
+         Structure kept clean so UTM parameters can be appended
+         directly to each href, e.g.:
+         https://yourwebsite.com/?utm_source=linkpage&utm_medium=social&utm_campaign=bio_link
+         ============================================================ -->
+    <div class="links">
+
+      <a class="link-btn"
+         href="https://yourwebsite.com"
+         target="_blank" rel="noopener noreferrer"
+         data-link-name="website">
+        🌐 My Website
+      </a>
+
+      <a class="link-btn"
+         href="https://instagram.com/yourhandle"
+         target="_blank" rel="noopener noreferrer"
+         data-link-name="instagram">
+        📸 Instagram
+      </a>
+
+      <a class="link-btn"
+         href="https://youtube.com/@yourhandle"
+         target="_blank" rel="noopener noreferrer"
+         data-link-name="youtube">
+        ▶️ YouTube
+      </a>
+
+      <a class="link-btn"
+         href="https://yourshop.com"
+         target="_blank" rel="noopener noreferrer"
+         data-link-name="shop">
+        🛍️ Shop
+      </a>
+
+    </div>
+
+    <footer>&copy; 2026 Your Name</footer>
+
+  </div>
+
+  <!-- ============================================================
+       OPTIONAL: GA4 event tracking per link click (uncomment once
+       GA4 tag above is active). Fires a 'link_click' event with
+       the link's data-link-name for per-button analytics.
+       ============================================================ -->
+  <!--
+  <script>
+    document.querySelectorAll('.link-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'link_click', {
+            link_name: btn.getAttribute('data-link-name'),
+            link_url: btn.getAttribute('href')
+          });
+        }
+      });
+    });
+  </script>
+  -->
+
+</body>
+</html>
